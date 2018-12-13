@@ -11,9 +11,19 @@ body {
     radial-gradient(black 15%, transparent 16%) 8px 8px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color: #571428;
+    background-color: #222;
     background-size:16px 16px;
     overflow-x: hidden;
+}
+
+#title {
+    grid-column: 2 / 6;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0 3rem;
+    background: rgba(34, 34, 34, 0.65);
+    color: #b2e9f4;
+    font-weight: 300;
 }
 
 #wrapper {
@@ -27,26 +37,35 @@ body {
 
 #input-area {
     grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
 }
 
 #preview {
     grid-column:  4 / 7;
-    background-color: #222 ;
+    background-color: #222;
     color: #b2e9f4;
     padding: 1rem;
-    padding-bottom: 0;
-    border: 12px solid #36899a;
+    height: auto;
+    border: 22px solid #111;
+    border-top: 2rem solid #111;
+    border-bottom: 6rem solid #111;
     border-radius: 8px;
 }
 
 #editor {
     width: 100%;
-    height: 100%;
-    background: #222;
-    color: rgba(255, 255, 255, 0.87);
+    height: 50%;
+    background-color: #fff;
+    background-image:
+    linear-gradient(90deg, transparent 29px, #abced4 29px, #abced4 31px, transparent 31px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    color: #222;
     padding: 2rem;
-    border: 12px solid #36899a;
+    padding-left: 3rem;
     border-radius: 8px;
+    line-height: 1.4
 }
 
 #editor:focus {
@@ -54,10 +73,9 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-    #wrapper {
-        grid-gap: 0;
+    #title {
+        grid-column: 1 / -1;
     }
-    
     #input-area {
         grid-column: 1 / -1;
     }

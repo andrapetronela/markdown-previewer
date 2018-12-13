@@ -1,5 +1,4 @@
-let firstState = `Type on the first screen to see the text with _new_ clothes. 
-# React
+let firstState = `# React
 ## React
 ### React 
 #### React
@@ -43,6 +42,7 @@ class App extends React.Component {
     render() {
         return (
             <div id="wrapper">
+                <h1 id="title">Type on the first screen to see the text with new clothes.</h1>
                 <Textarea input={this.state.input} handleChange={this.handleChange} value="this.state.input"/>
                 <div id="preview" dangerouslySetInnerHTML={this.markup()}> 
                 </div>
