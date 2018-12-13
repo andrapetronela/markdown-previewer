@@ -9,8 +9,7 @@ let firstState = `# React
 marked.setOptions({ breaks: true });
 
 if (window.innerWidth < 500) {
-    firstState = `Type on the first screen to see the text with _new_ clothes. 
-# React
+    firstState = `# React
 ## React
 ### React 
 #### React
