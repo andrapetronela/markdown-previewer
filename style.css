@@ -52,3 +52,25 @@ body {
 #editor:focus {
     outline: none;
 }
+
+@media only screen and (max-width: 900px) {
+    #wrapper {
+        grid-gap: 0;
+    }
+    
+    #input-area {
+        grid-column: 1 / -1;
+    }
+    
+    #editor {
+        height: 40vh;
+    }
+
+    #preview {
+        grid-column:  1 / -1;
+    }
+    
+}
+
+
+

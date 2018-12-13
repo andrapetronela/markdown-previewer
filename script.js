@@ -1,4 +1,4 @@
-const firstState = `Type on the left screen to see it on the right one with _new_ clothes. 
+let firstState = `Type on the first screen to see the text with _new_ clothes. 
 # React
 ## React
 ### React 
@@ -8,6 +8,16 @@ const firstState = `Type on the left screen to see it on the right one with _new
 ![React Logo w/ Text](https://goo.gl/Umyytc)`;
 
 marked.setOptions({ breaks: true });
+
+if (window.innerWidth < 500) {
+    firstState = `Type on the first screen to see the text with _new_ clothes. 
+# React
+## React
+### React 
+#### React
+##### React
+###### React`;
+}
 
 class App extends React.Component {
     constructor(props) {
