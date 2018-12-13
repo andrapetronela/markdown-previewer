@@ -1,5 +1,5 @@
 const firstState = `# Welcome to my React Markdown Previewer!
-
+![React Logo w/ Text](https://goo.gl/Umyytc)
 ## This is a sub-heading...
 ### And here's some other cool stuff:
   
@@ -39,10 +39,8 @@ And here. | Okay. | I think we get it.
 1. And there are numbererd lists too.
 1. Use just 1s if you want! 
 1. But the list goes on...
-- Even if you use dashes or asterisks.
-* And last but not least, let's not forget embedded images:
-
-![React Logo w/ Text](https://goo.gl/Umyytc)`;
+- Even if you use dashes ...
+* or asterisks`;
 
 marked.setOptions({ breaks: true });
 
@@ -69,7 +67,7 @@ class App extends React.Component {
       
     render() {
         return (
-            <div>
+            <div id="wrapper">
                 <Textarea input={this.state.input} handleChange={this.handleChange} value="this.state.input"/>
                 <div id="preview" dangerouslySetInnerHTML={this.markup()}> 
                 </div>
@@ -81,7 +79,7 @@ class App extends React.Component {
 class Textarea extends React.Component {
     render() {
         return (
-            <div>
+            <div id="input-area">
                 <textarea id="editor" value={this.props.input} onChange={this.props.handleChange}> </textarea>
             </div>
         )  

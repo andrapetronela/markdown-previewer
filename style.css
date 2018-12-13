@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC';
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+/*    background-color:#282828;*/
+    background-color: #571428;
+    background-size:16px 16px;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    width: 100vw;
+    margin: auto;
+    padding: 2rem;
+}
+
+#input-area {
+    grid-column: 1 / 4;
+}
+
+#preview {
+    grid-column:  4 / 7;
+    background-color: #222 ;
+    color: rgba(255, 255, 255, 0.87);
+    padding: 2rem;
+    border: 12px solid #1FB8B3;
+    border-radius: 8px;
+}
+
+#editor {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    color: rgba(255, 255, 255, 0.87);
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+}
+
+#editor:focus {
+    outline: none;
+}
