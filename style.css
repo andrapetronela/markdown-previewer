@@ -75,6 +75,7 @@ body {
 @media only screen and (max-width: 900px) {
     #title {
         grid-column: 1 / -1;
+        padding: 0;
     }
     #input-area {
         grid-column: 1 / -1;
